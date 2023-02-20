@@ -1,0 +1,30 @@
+{
+  "name": "my-lib-e2e",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "my-lib-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "my-lib-e2e/cypress.config.ts",
+        "devServerTarget": "my-lib:storybook",
+        "testingType": "e2e"
+      },
+      "configurations": {
+        "ci": {
+          "devServerTarget": "my-lib:storybook:ci"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["my-lib-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["my-lib"]
+}
