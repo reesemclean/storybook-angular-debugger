@@ -9,4 +9,4 @@ Open your browser dev tools.
 
 Refresh the page.
 
-Notice that the code you are seeing in your dev tools is a compiled version of the `my-lib/src/lib/button/button.component.ts`
+Notice that the code you are seeing in your dev tools at the debug point is a compiled version of `my-lib/src/lib/button/button.component.ts`

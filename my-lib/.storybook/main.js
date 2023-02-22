@@ -1,13 +1,18 @@
 module.exports = {
-  core: { builder: 'webpack5' },
-  stories: ['../**/*.stories.mdx', '../**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: ['../**/*.mdx', '../**/*.stories.@(js|jsx|ts|tsx)'],
   addons: ['@storybook/addon-essentials'],
-  webpackFinal: async (config, { configType }) => {
-
+  webpackFinal: async (config, {
+    configType
+  }) => {
     config.devtool = 'source-map';
-
     return config;
-
+  },
+  framework: {
+    name: '@storybook/angular',
+    options: {}
+  },
+  docs: {
+    autodocs: true
   }
 };
 
