@@ -17,3 +17,5 @@ const Template: Story<ButtonComponent> = (args: ButtonComponent) => ({
 
 export const Primary = Template.bind({});
 Primary.args = {};
+
+export const Second = Template.bind({});
